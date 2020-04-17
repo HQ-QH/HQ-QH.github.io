@@ -107,8 +107,9 @@
 <meta property="og:image" content="http://yoursite.com/images/demo-lbl.png">
 <meta property="og:image" content="http://yoursite.com/images/demo-lblid.png">
 <meta property="og:image" content="http://yoursite.com/images/demo-lblsucc.png">
+<meta property="og:image" content="http://yoursite.com/images/demo-bqimg.png">
 <meta property="article:published_time" content="2020-04-12T12:55:41.000Z">
-<meta property="article:modified_time" content="2020-04-17T04:54:18.909Z">
+<meta property="article:modified_time" content="2020-04-17T06:04:14.730Z">
 <meta property="article:author" content="Student-HQ">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -129,13 +130,6 @@
     duoshuo: {
       userId: '0',
       author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"qingshuru","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
@@ -236,7 +230,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
@@ -246,7 +240,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
@@ -256,7 +250,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
@@ -386,7 +380,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-04-17T12:54:18+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-17T14:04:14+08:00">
                 2020-04-17
               </time>
             
@@ -436,7 +430,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  471 字
+                  696 字
                 </span>
               
 
@@ -452,7 +446,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -485,7 +479,7 @@
 </li>
 <li><h2 id="添加评论“来必力”"><a href="#添加评论“来必力”" class="headerlink" title="添加评论“来必力”"></a>添加评论“来必力”</h2><p>首先：注册账号，打开来必力官网：<a href="https://livere.com" target="_blank" rel="noopener">https://livere.com</a>,  按照流程右上角点击 登录 然后进行注册，<br>其次：注册好了在登录进去安装，点击上方的安装，选择免费的city版本，如下：<br><img src="/images/demo-lbl.png" alt><br>点击现在安装，会出现一个输入网址的页面，把需要用到来必力的网址加上去就行，接着会出现如下界面：<br><img src="/images/demo-lblid.png" alt>;<br>复制其中的uid字段,然后，打开主题目录下的 blog/themes/next/_config.yml 配置文件，定位到 livere_uid 字段，粘贴上刚刚复制的 uid ,大功告成～<br>执行hexo clean(清除缓存)，hexo g ,hexo d重新部署就可以了；若没部署到git上，hexo s打开本地服务也可以看啦。。成果图：<br><img src="/images/demo-lblsucc.png" alt></p>
 </li>
-<li><h2 id="增加“更新时间”"><a href="#增加“更新时间”" class="headerlink" title="增加“更新时间”"></a>增加“更新时间”</h2><p>首先：直接修改主题配置文件（博客主目录）/themes/next/_config.yml，中找到</p>
+<li><h2 id="添加“更新时间”"><a href="#添加“更新时间”" class="headerlink" title="添加“更新时间”"></a>添加“更新时间”</h2><p>首先：直接修改主题配置文件（博客主目录）/themes/next/_config.yml，中找到</p>
  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">updated_at: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <p>修改为：   </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">updated_at: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
@@ -493,9 +487,16 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display_updated: <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
 <p>最后清除下缓存，重新部署即可</p>
 </li>
+<li><h2 id="添加看板娘"><a href="#添加看板娘" class="headerlink" title="添加看板娘"></a>添加看板娘</h2><p>首先：项目根目录下下载live2d插件<code>npm install --save hexo-helper-live2d</code><br>然后：还是在根目录输入以下命令：<code>npm install live2d-widget-model-&#39;你想要的模型&#39;</code><br>接着：修改根目录下的 <code>_config.yml</code>文件，如我的代码：(仅供参考奥)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-koharu <span class="comment">//一定要和下载的模板保持一致，不然会404的奥</span></span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: <span class="number">150</span></span><br><span class="line">    height: <span class="number">300</span></span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>看板娘模型参考：<a href="https://blog.csdn.net/wang_123_zy/article/details/87181892" target="_blank" rel="noopener">https://blog.csdn.net/wang_123_zy/article/details/87181892</a></p>
+</li>
+<li><h2 id="添加版权信息"><a href="#添加版权信息" class="headerlink" title="添加版权信息"></a>添加版权信息</h2><p>参考下面博文链接：<a href="https://blog.csdn.net/buknow/article/details/101216465/" target="_blank" rel="noopener">https://blog.csdn.net/buknow/article/details/101216465/</a><br>康康效果图：<img src="/images/demo-bqimg.png" alt></p>
+</li>
 <li><h2 id="引用一为大佬的美化博文"><a href="#引用一为大佬的美化博文" class="headerlink" title="引用一为大佬的美化博文"></a>引用一为大佬的美化博文</h2><p>着实写不动了，还望大佬恕罪～<br><a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" target="_blank" rel="noopener">http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html</a></p>
 </li>
 </ol>
+<h1 id="致谢🙏"><a href="#致谢🙏" class="headerlink" title="致谢🙏"></a>致谢🙏</h1><p>感谢大神们的文章，真的学到了许多，有些忘了记录下来，在这里由衷的感谢。虽然比较折腾，但是确实满满的成就感，如果链接🔗有侵权，还望联系我以删除～</p>
 
       
     </div>
@@ -518,7 +519,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>If您觉得对你有帮助,留下点支持叭～～</div>
+  <div>赏杯奶茶🥤七七叭 ～💗～</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
   </button>
@@ -547,6 +548,41 @@
     
 
     
+
+  <div>
+     
+       
+<div class="my_post_copyright">
+<div style="text-align:center;color: #ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/2020/04/12/filename/">hexo主题美化</a></p>
+ <p><span>文章作者:</span><a href="/" title="访问 Student-HQ 的个人博客">Student-HQ</a></p>
+ <p><span>发布时间:</span>2020年04月12日 - 20:55</p>
+ <p><span>最后更新:</span>2020年04月17日 - 14:04</p>
+ <p><span>原始链接:</span><a href="/2020/04/12/filename/" title="hexo主题美化">http://yoursite.com/2020/04/12/filename/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2020/04/12/filename/"  aria-label="复制成功！"></i></span>
+ </p>
+ <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $(".fa-clipboard").click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: "",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+
+
+     
+  </div>
 
     <footer class="post-footer">
       
@@ -653,7 +689,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives">
               
                   <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
@@ -739,7 +775,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加“阅读全文”按钮"><span class="nav-number">1.</span> <span class="nav-text">添加“阅读全文”按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加评论“来必力”"><span class="nav-number">2.</span> <span class="nav-text">添加评论“来必力”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增加“更新时间”"><span class="nav-number">3.</span> <span class="nav-text">增加“更新时间”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用一为大佬的美化博文"><span class="nav-number">4.</span> <span class="nav-text">引用一为大佬的美化博文</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加“阅读全文”按钮"><span class="nav-number">1.</span> <span class="nav-text">添加“阅读全文”按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加评论“来必力”"><span class="nav-number">2.</span> <span class="nav-text">添加评论“来必力”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加“更新时间”"><span class="nav-number">3.</span> <span class="nav-text">添加“更新时间”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加看板娘"><span class="nav-number">4.</span> <span class="nav-text">添加看板娘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加版权信息"><span class="nav-number">5.</span> <span class="nav-text">添加版权信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用一为大佬的美化博文"><span class="nav-number">6.</span> <span class="nav-text">引用一为大佬的美化博文</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#致谢🙏"><span class="nav-number"></span> <span class="nav-text">致谢🙏</span></a></div>
             
 
           </div>
@@ -774,7 +810,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.5k</span>
+    <span title="Site words total count">1.8k</span>
   
 </div>
 
@@ -792,7 +828,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.5k字</span>
+  <span class="post-count">博客全站共1.8k字</span>
 </div>
         
 
@@ -953,7 +989,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "search.xml";
+    var search_path = "./templates/search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
