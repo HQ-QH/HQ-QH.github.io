@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite.com/2020/04/13/hello-world/</loc>
+    <loc>http://yoursite.com/hexo%E7%BE%8E%E5%8C%96/filename/</loc>
+    <lastmod>2020-04-18</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/hexo%E8%B8%A9%E5%9D%91%E8%AE%B0/hello-world/</loc>
     <lastmod>2020-04-17</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2020/04/17/article-vscode/</loc>
-    <lastmod>2020-04-17</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/04/12/filename/</loc>
+    <loc>http://yoursite.com/hexo%E7%BE%8E%E5%8C%96/article-vscode/</loc>
     <lastmod>2020-04-17</lastmod>
   </url>
 </urlset>
