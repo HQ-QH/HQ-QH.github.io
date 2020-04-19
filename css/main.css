@@ -1852,7 +1852,7 @@ pre {
 }
 .sidebar {
   position: fixed;
-  right: 0;
+  left: 0;
   top: 0;
   bottom: 0;
   width: 0;
@@ -1893,7 +1893,7 @@ pre {
 }
 .sidebar-toggle {
   position: fixed;
-  right: 30px;
+  left: 30px;
   bottom: 45px;
   width: 14px;
   height: 14px;
@@ -2024,7 +2024,7 @@ pre {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9867ff;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;
