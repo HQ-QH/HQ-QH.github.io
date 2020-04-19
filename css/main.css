@@ -2024,7 +2024,7 @@ pre {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4a61b9;
+  background: #ffcd95;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3122,9 +3122,6 @@ hr {
 }
 .open:after {
   content: "▲";
-}
-* {
-  color: #3c3c3c;
 }
 .highlight {
   position: relative;
