@@ -1898,7 +1898,7 @@ pre {
   width: 14px;
   height: 14px;
   padding: 5px;
-  background: $black-d;
+  background: #222;
   line-height: 0;
   z-index: 1050;
   cursor: pointer;
@@ -2024,7 +2024,7 @@ pre {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6affff;
+  background: #4a61b9;
 }
 .links-of-blogroll {
   font-size: 13px;
